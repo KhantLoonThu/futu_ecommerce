@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* for logo brand */
+.logo-brand span {
+  background: linear-gradient(90deg, #ff00bf, #008cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tabs.active {
+  transition: all 0.5s ease-in-out;
+  border-color: #4f46e5;
+  color: #fff;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
+
+.inner-tabs.active {
+  color: #4f46e5;
+}
+
+.inner-category.active,
+.inner-user.active {
+  transition: all 0.5s ease-in-out;
+}
+
+.toggle-btn {
+  transition: transform 0.3s ease-in-out;
+}
+
+.rotate-180 {
+  transform: rotate(90deg);
+}
+
+.aside-sidebar {
+  transition: all 0.5s ease-in-out;
+}
+
+.admin-name,
+.admin-image {
+  user-select: none; /* For modern browsers */
+  -webkit-user-select: none; /* For Safari */
+  -moz-user-select: none; /* For Firefox */
+  -ms-user-select: none; /* For older versions of Internet Explorer */
+}
