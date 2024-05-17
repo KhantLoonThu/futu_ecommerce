@@ -80,4 +80,23 @@ class Subcategory
         $statement->bindParam(':category_id', $category_id);
         return $statement->execute();
     }
+    // end edit
+
+    // delete
+    public function deleteSubcategory($id)
+    {
+        $this->con = Database::connect();
+        $sql_for_valid = "SELECT count(*) as total FROM products WHERE subcategory_id = :id";
+        $statement_for_valid = $this->con->prepare($sql_for_valid);
+        $statement_for_valid->bindParam(":id", $id);
+        if ($statement_for_valid->execute()) {
+            $product_count = $statement_for_valid->fetch(\PDO::FETCH_ASSOC);
+            if (!$product_count['total'] > 0) {
+                $sql = "UPDATE sub_categories SET archive = 1 WHERE id = :id";
+                $statement = $this->con->prepare($sql);
+                $statement->bindParam(":id", $id);
+                return $statement->execute();
+            }
+        }
+    }
 }

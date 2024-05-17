@@ -6,7 +6,7 @@ $admin = $_SESSION['main_admin'];
 
 ?>
 
-<nav class="sticky top-0 w-full bg-white dark:bg-gray-900 transition-all ease-linear duration-300 z-50 flex justify-between items-center py-2 px-8  border-b border-b-gray-300 dark:border-b-gray-600 shadow-lg">
+<nav class="sticky top-0 right-0 w-full bg-white dark:bg-gray-900 transition-all ease-linear duration-300 z-0 flex justify-between items-center py-2 px-8  border-b border-b-gray-300 dark:border-b-gray-600 shadow-lg">
     <div>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hidden lg:block md:block sm:hidden close-sidebar-toggle cursor-pointer">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />

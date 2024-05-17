@@ -47,4 +47,11 @@ class SubcategoryController
         var_dump($category_id);
         return $this->subcategory->updateSubcategory($id, $subcategory_name, $category_id);
     }
+    // end edit
+
+    // delete
+    public function deleteSubcategory($id)
+    {
+        return $this->subcategory->deleteSubcategory($id);
+    }
 }
