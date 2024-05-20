@@ -47,7 +47,7 @@ if (isset($_POST['add_subcategory_btn'])) {
         // checking if there is already existed
         $alreadyExisted = $subcategory_controller->getExistingSubcategory($subcategory_name, $category_name); // it was id, wrong declaring variablename
 
-        if ($alreadyExisted['total'] == 0) {
+        if ($alreadyExisted['total'] == 0 && $category_name == $current_subcategory['category_id']) {
             $status = $subcategory_controller->updateSubcategory($id, $subcategory_name, $category_name);
             $subcategory_name = "";
             header('location:./index.php?sub_edit_success=true');
