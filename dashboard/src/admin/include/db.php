@@ -1,0 +1,20 @@
+<?php
+
+namespace Admin\Include\Database;
+
+use PDO;
+
+class Database
+{
+    private static $connection;
+
+    public static function connect()
+    {
+        return self::$connection = new PDO("mysql:host=localhost;dbname=futu_example;", "root", "");
+    }
+
+    public static function disconnect()
+    {
+        return self::$connection = null;
+    }
+}
